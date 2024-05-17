@@ -1,0 +1,36 @@
+/* Custom CSS for Login Page */
+.login-card {
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Custom CSS for Dashboard */
+  .sidebar {
+    background: #f8f9fa;
+    height: 100vh;
+    position: fixed;
+  }
+  
+  .sidebar .nav-link {
+    color: #333;
+    padding: 10px 15px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  
+  .sidebar .nav-link:hover {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  .navbar {
+    margin-left: 250px; /* Width of the sidebar */
+  }
+  
+  .container-fluid {
+    margin-left: 250px; /* Width of the sidebar */
+  }
+  
