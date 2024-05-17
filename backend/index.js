@@ -21,6 +21,10 @@ const buildpath = path.join(_dirname, "../final-dash/build")
 
 app.use (express.static(buildpath))
 
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
 // Endpoint for login
 app.post("/login", async (req, res) => {
   const { employeeID, password } = req.body;
