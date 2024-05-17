@@ -19,7 +19,7 @@ const FoodMenuCard = () => {
     const fetchMenu = async (date) => {
       try {
         const formattedDate = date.toISOString().split('T')[0]; // Format date as "YYYY-MM-DD"
-        const response = await axios.post('http://localhost:3001/get-food-menu', { date: formattedDate });
+        const response = await axios.post('https://technomine-server.vercel.app/get-food-menu', { date: formattedDate });
         
         // Parse the response to set the menu
         const newMenu = response.data.reduce((acc, item) => {
@@ -61,7 +61,7 @@ const FoodMenuCard = () => {
     const mealType = selectedMeal.toUpperCase();
   
     try {
-      const response = await axios.post('http://localhost:3001/book-coupon', {
+      const response = await axios.post('https://technomine-server.vercel.app/book-coupon', {
         employeeID,
         date: formattedDate,
         mealType

@@ -19,7 +19,7 @@ function UpdatePasswordForm() {
       }
 
       try {
-        await axios.post("http://localhost:3001/update-password", { employeeID, password });
+        await axios.post("https://technomine-server.vercel.app/update-password", { employeeID, password });
         toast.success("Password updated successfully");
         navigate("/");
       } catch (error) {

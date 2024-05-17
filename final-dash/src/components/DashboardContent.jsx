@@ -26,7 +26,7 @@ const DashboardContent = () => {
       try {
         const employeeID = localStorage.getItem("employeeID");
         const response = await axios.post(
-          "http://localhost:3001/get-employee-basic-detail",
+          "https://technomine-server.vercel.app/get-employee-basic-detail",
           { employeeID }
         );
         setEmployeeName(response.data);
@@ -45,7 +45,7 @@ const DashboardContent = () => {
         const fromDate = startDate.toISOString().split("T")[0];
         const toDate = endDate.toISOString().split("T")[0];
         const response = await axios.post(
-          "http://localhost:3001/show-my-coupons",
+          "https://technomine-server.vercel.app/show-my-coupons",
           { employeeID, fromDate, toDate }
         );
         setCoupons(response.data);
@@ -60,7 +60,7 @@ const DashboardContent = () => {
   const cancelCoupon = async (couponCode) => {
     try {
       const response = await axios.post(
-        "http://localhost:3001/cancel-coupon",
+        "https://technomine-server.vercel.app/cancel-coupon",
         { couponCode }
       );
       if (response.data === "TIMEOUT") {
